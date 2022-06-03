@@ -53,24 +53,42 @@ public class ParkingDilema {
         int n = cars.length;
         int i=0;
         int j=0;
-       /* while(j<n){
-            if(j-1+1 < k)
 
-        }*/
-
-
-/*
-        for (int i = 0; i <= cars.length - k; i++) {
+        for (i = 0; i <= cars.length - k; i++) {
 
             roofLen = (cars[i+k-1] - cars[i])+1;
 
             minRoofLen = Math.min(minRoofLen, roofLen);
         }
 
-        return minRoofLen;*/
-
-        return 0l;
+        return minRoofLen;
     }
+
+    static int findRoofLen_SW(int[] cars, int k) {
+
+        Arrays.sort(cars);
+
+        int roofLen = Integer.MAX_VALUE;
+        for (int i = 0, j = 0; i <= cars.length -k; j++) {
+
+            if (j + i - 1 < k) {  //till First Window
+                roofLen = (cars[j] - cars[i]);
+            }
+
+            // For every window from there
+
+
+            tempSum += a[j];
+
+            if (j - i + 1 == k) {
+                maxSum = Math.max(tempSum, maxSum);
+                tempSum = tempSum - a[i];
+                i++;
+            }
+        }
+        return maxSum;
+    }
+
 
 
 }
