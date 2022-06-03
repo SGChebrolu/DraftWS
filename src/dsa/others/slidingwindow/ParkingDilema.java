@@ -8,10 +8,30 @@ public class ParkingDilema {
 
     public static void main(String[] args){
         int[] a = {2,8,10,17};
-        System.out.println(minRoofLength(a,3));
+        System.out.println(findRoofLen_SW(a,3));
     }
 
-    public static int minRoofLength(int[] arr, int k){
+    static int findRoofLen_SW(int[] cars, int k) {
+
+        Arrays.sort(cars);
+
+        int minRoofLen = Integer.MAX_VALUE;
+        int roofLen;
+        for (int i = 0, j = 0; i <= cars.length -k; j++) {
+
+            if (j - i + 1 < k) {  //till First Window
+                continue;
+            }
+
+            // for every next Window
+            roofLen = cars[j] - cars[i];
+            minRoofLen = Math.min(minRoofLen, roofLen);
+            i++;
+        }
+        return minRoofLen+1;
+    }
+
+    /*public static int minRoofLength(int[] arr, int k){
         Arrays.sort(arr);
         int start = 0;
         int minRoofLength = Integer.MAX_VALUE;
@@ -62,33 +82,5 @@ public class ParkingDilema {
         }
 
         return minRoofLen;
-    }
-
-    static int findRoofLen_SW(int[] cars, int k) {
-
-        Arrays.sort(cars);
-
-        int roofLen = Integer.MAX_VALUE;
-        for (int i = 0, j = 0; i <= cars.length -k; j++) {
-
-            if (j + i - 1 < k) {  //till First Window
-                roofLen = (cars[j] - cars[i]);
-            }
-
-            // For every window from there
-
-
-            tempSum += a[j];
-
-            if (j - i + 1 == k) {
-                maxSum = Math.max(tempSum, maxSum);
-                tempSum = tempSum - a[i];
-                i++;
-            }
-        }
-        return maxSum;
-    }
-
-
-
+    }*/
 }
