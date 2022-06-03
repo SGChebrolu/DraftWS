@@ -60,4 +60,6 @@ public class DuplicateInArray {
 
         return -1;
     }
+    
+    // duplicate character inn String;
 }
