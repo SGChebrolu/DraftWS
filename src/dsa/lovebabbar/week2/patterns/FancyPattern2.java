@@ -1,4 +1,4 @@
-package dsa.lovebabbar.patterns;
+package dsa.lovebabbar.week2.patterns;
 
 public class FancyPattern2 {
 
