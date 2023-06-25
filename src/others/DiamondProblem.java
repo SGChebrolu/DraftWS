@@ -27,7 +27,7 @@ interface PI2 {
 	}
 }
 
-// Main class
+// Game class
 // Implementation class code
 class TestClass implements PI1, PI2 {
 

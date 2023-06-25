@@ -1,4 +1,4 @@
-package dsa.lovebabbar.week3.arrays;
+package dsa.lovebabbar.week3.inclass.part1;
 
 public class Basic {
 

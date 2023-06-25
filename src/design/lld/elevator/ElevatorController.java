@@ -1,5 +1,5 @@
 /*
-package design.system.elevator;
+package design.lld.elevator;
 
 import java.util.ArrayList;
 import java.util.Queue;
