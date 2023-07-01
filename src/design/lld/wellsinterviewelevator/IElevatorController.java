@@ -1,4 +1,4 @@
-package design.lld.elevator;
+package design.lld.wellsinterviewelevator;
 
 public interface IElevatorController {
     public void status();

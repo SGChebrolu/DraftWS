@@ -1,4 +1,4 @@
-package design.lld.elevator;
+package design.lld.wellsinterviewelevator;
 
 public class Constants {
     public static final int FLOORS = 40;

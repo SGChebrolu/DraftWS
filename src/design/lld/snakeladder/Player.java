@@ -8,4 +8,16 @@ public class Player {
         this.id = id;
         this.currentPosition = currentPosition;
     }
+
+    public int getCurrentPosition() {
+        return currentPosition;
+    }
+
+    public void setCurrentPosition(int currentPosition) {
+        this.currentPosition = currentPosition;
+    }
+
+    public String getId() {
+        return id;
+    }
 }
